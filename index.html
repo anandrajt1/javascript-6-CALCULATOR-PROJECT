@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+
+    <!-- create div for whole screen named mainbody-->
+
+<div class="main-body">
+
+    <img style="width: 100%;height: 600px;" src="https://images.unsplash.com/photo-1691874678829-76e4e7fb5e93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="">
+
+    <!-- create calc body using another div -->
+
+    <div class="calc">
+<!-- div for calc screen -->
+<!-- use pionter events none in css for disabling typing in input field  -->
+        <div class="output">
+            <input type="text" id="screen">
+        </div>
+<!-- div for buttons -->
+        <div class="buttons">
+<!-- clear button c use fntn clear -->
+
+<!-- stnd method in js while naming functions-1st leter smal 2nd word with capitol -->
+
+            <button style="background-color: rgba(255, 21, 21, 0.911);" onclick="clearDisplay()" class="btn">C</button>
+
+            <div class="row">
+                <!-- dont name fn as click sicne click is a fntn alrady there in libray as default so cant call it -->
+                <!-- clear is also default it wont call -->
+                <button onclick="btnclick(7)" class="btn">7</button>
+                <button onclick="btnclick(8)" class="btn">8</button>
+                <button onclick="btnclick(9)" class="btn">9</button>
+                <button style="background-color: rgb(236, 155, 97);" onclick="btnclick('/')" class="btn">/</button>
+                <!-- use'' for / bcoz it is not a number' -->
+            </div>
+
+            <div class="row">
+                <button onclick="btnclick(4)" class="btn">4</button>
+                <button onclick="btnclick(5)" class="btn">5</button>
+                <button onclick="btnclick(6)" class="btn">6</button>
+                <button style="background-color: rgb(236, 155, 97);" onclick="btnclick('*')" class="btn">x</button>
+                
+            </div>
+
+            <div class="row">
+                <button onclick="btnclick(1)" class="btn">1</button>
+                <button onclick="btnclick(2)" class="btn">2</button>
+                <button onclick="btnclick(3)" class="btn">3</button>
+                <button style="background-color: rgb(236, 155, 97);" onclick="btnclick('-')" class="btn">-</button>
+                
+            </div>
+            <div class="row">
+                <button onclick="btnclick('.')" class="btn">.</button>
+                <button onclick="btnclick(0)" class="btn">0</button>
+                <button style="background-color: rgb(236, 155, 97);" onclick="btnclick('+')" class="btn">+</button>
+                <!-- give another fn for equall to button -->
+                <button style="background-color: rgba(27, 255, 19, 0.822);" onclick="equalClick()" class="btn">=</button>
+            </div>
+<!-- to do calculations use fn eval() already in the library. eval will do the oprations.use it in js file-->
+        </div>
+    </div>
+</div>
+    
+
+
+    
+</body>
+</html>
